@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <section class="w-[100vw] h-[70px]  bg-[#e4e3e3]">
-        <header class="w-full h-full flex">
+    <section class="w-[100vw] h-[70px]  bg-[#e4e3e3] fixed top-0 ">
+        <header class="w-full h-full flex ">
         <!-- logo container -->
         <div  class="w-[150px] h-[69px]  flex justify-center items-center">
             <img src="./assets/download.png" alt="logo"
@@ -53,9 +53,9 @@
         </header>
     </section>
     <!-- Main section of the website -->
-     <section class="  h-[calc(100vh-70px)] flex">
+     <section class="  h-[calc(100vh-70px)] flex pt-20">
       <!-- left sidebar(aside) -->
-       <aside class="bg-[#f0eeee] basis-[15%]">
+       <aside class="basis-[15%]  fixed top-[70px]">
         <div class="w-full ">
           <h1 class="font-semibold text-[#828DA8] px-12 pt-10 pb-2 text-xs">BROWSE</h1>
           <ul class="w-full px-12">
@@ -67,7 +67,7 @@
             <li class="font-semibold py-1 cursor-pointer hover:font-bold">Radio</li>
           </ul>
         </div>
-        <div class="w-full">
+        <div class=" fixed  top-[320px]">
           <h1 class="font-semibold text-[#828DA8] px-12 pt-10 pb-2 text-xs">LIBRARY</h1>
           <ul class="w-full px-12">
             <li class="font-semibold py-1 cursor-pointer hover:font-bold">
@@ -93,22 +93,32 @@
           </ul>
         </div>
         <br>
-        <div class="w-full flex items-center  justify-center py-4">
-        <button class="py-2 px-6 border border-[#14a191] rounded-full cursor-pointer ">
+        <div class="w-full flex items-center  py-4 fixed top-[550px]">
+        <button class="py-2 ml-4 px-6 border border-[#14a191] rounded-full cursor-pointer ">
           <span><i class="fa-solid fa-plus text-green-500"></i></span>
           <span class="text-green-500 hover:font-bold">New playlist</span>
         </button>
       </div>
        </aside>
        <!-- Right -side(main content) -->
-        <article class=" basis-[85%]">
-          <main class="pl-6 py-3 ">
+        <article class=" basis-[85%] ml-[15%]">
+          <main class="pl-6 py-3">
             <h1 class="font-semibold tex-xl text-[#404040] py-2">Trending Now</h1>
             <!-- outer div -->
             <div class="w-95% flex justify-evenly items-center">
 <!-- inner div -->
-            <div class="px-2 w-[13%] "> 
-              <img class="cursor-pointer" src="https://c.saavncdn.com/229/Kesari-Chapter-2-Original-Motion-Picture-Soundtrack-Hindi-2025-20250421111144-150x150.jpg" alt="kesari chapter2">
+            <div class="px-2 w-[13%] relative"> 
+              <img class="cursor-pointer w-[150px] h-[150px]" src="https://c.saavncdn.com/229/Kesari-Chapter-2-Original-Motion-Picture-Soundtrack-Hindi-2025-20250421111144-150x150.jpg" alt="kesari chapter2">
+              <!-- hover effect-->
+              <div class="w-[150px] h-[150px] bg-black/50 absolute top-0 opacity-0 hover:opacity-100 text-white">
+                <div class="w-full absolute bottom-0 flex justify-between px-3 py-2">
+                 <span><i class="fa-solid fa-heart"></i></span>
+                 <span class=""><i class="fa-solid fa-play"></i></span> 
+                <span><i class="fa-solid fa-ellipsis"></i></span>
+                </div>
+
+              </div>
+
               <h1 class="text-md text-center text-[#2f2f2f] font-semibold hover:font-bold cursor-pointer">Kesari chapter-2</h1>
               <h2 class="text-sm text-center pl-3 cursor-pointer">Shashwat Sachdev</h2>
             </div>
@@ -143,6 +153,7 @@
               <h2 class="text-sm text-center pl-3 cursor-pointer">A.R.Rahman</h2>
             </div>
             </div>
+            <!-- Top charts -->
             <h1 class="font-semibold tex-xl text-[#404040] py-2">Top Charts</h1>
             <div class="w-95% flex justify-evenly items-center ">
               <div class="px-2 w-[13%]  ">
@@ -170,6 +181,7 @@
                 <h1 class="text-md text-center text-[#2f2f2f] font-semibold hover:font-bold cursor-pointer">Most searched</h1>
               </div>
             </div>
+            <!-- New Releases -->
             <h1 class="font-semibold tex-xl text-[#404040] py-2">New Releases</h1>
             <!-- outer div -->
             <div class="w-95% flex justify-evenly items-center">
@@ -210,44 +222,61 @@
               <h2 class="text-sm text-center pl-3 cursor-pointer">A.R.Rahman</h2>
             </div>
             </div>
+            <!-- Radio Stations -->
             <h1 class="font-semibold tex-xl text-[#404040] py-2">Radio Stations</h1>
             <!-- outer div -->
-            <div class="w-95% flex justify-evenly items-center">
-<!-- inner div -->
+            <div class="w-95% flex items-center">
+             <!-- inner div -->
             <div class="px-2 w-[13%] "> 
               <img class="cursor-pointer rounded-full" src="https://c.saavncdn.com/editorial/DesiHipHop_saavn_radio_20210331122730_150x150.jpg" alt="Desi hip hop">
               <h1 class="text-md text-center text-[#2f2f2f] font-semibold hover:font-bold cursor-pointer">Desi Hip Hop </h1>
               <h2 class="text-sm text-center pl-3 cursor-pointer">Hindi Radio</h2>
             </div>
-            <div>
+            <div class="px-2 w-[13%] " >
               <img class="cursor-pointer rounded-full"  src="https://c.saavncdn.com/editorial/NirgunBhakti_saavn_radio_20201231131533_150x150.jpg" alt="Nirgun bhakti">
               <h1 class="text-md text-center text-[#2f2f2f] font-semibold hover:font-bold cursor-pointer">Nirgun bhakti</h1>
               <h2 class="text-sm text-center cursor-pointer pl-3">Hindi Radio</h2>
             </div>
-            <div>
-              <img  class="cursor-pointer rounded-full" src="https://c.saavncdn.com/887/Sikandar-Hindi-2025-20250410091041-150x150.jpg?bch=484807" alt="Sikander">
-              <h1 class="text-md text-center text-[#2f2f2f] font-semibold hover:font-bold cursor-pointer">Sikander</h1>
-              <h2 class="text-sm text-center pl-3 cursor-pointer">Pritam,JAM8</h2>
+            <div class="px-2 w-[13%] ">
+              <img  class="cursor-pointer rounded-full" src="https://c.saavncdn.com/editorial/MusicalCovers_saavn_radio_20210528093259_150x150.jpg" alt="Hindi music">
+              <h1 class="text-md text-center text-[#2f2f2f] font-semibold hover:font-bold cursor-pointer">Hindi Music</h1>
+              <h2 class="text-sm text-center pl-3 cursor-pointer">Hindi Radio</h2>
             </div>
-            <div>
-              <img  class="cursor-pointer rounded-full"   src="https://c.saavncdn.com/505/Jaat-Hindi-2025-20250410091040-150x150.jpg?bch=484807" alt="Jaat">
-              <h1 class="text-md text-center text-[#2f2f2f] font-semibold hover:font-bold cursor-pointer">JAAT</h1>
-              <h2 class="text-sm text-center pl-3 cursor-pointer">Thaman S</h2>
+            <div class="px-2 w-[13%] ">
+              <img  class="cursor-pointer rounded-full"   src="https://c.saavncdn.com/editorial/Retro70sand80s_saavn_radio_20211129082651_150x150.jpg" alt="Hindi Radio">
+              <h1 class="text-md text-center text-[#2f2f2f] font-semibold hover:font-bold cursor-pointer">Hindi Radio</h1>
+              <h2 class="text-sm text-center pl-3 cursor-pointer">Hindi Radio</h2>
             </div>
-            <div>
-              <img  class="cursor-pointer rounded-full"   src="https://c.saavncdn.com/067/Finding-Her-Hindi-2025-20250104190643-150x150.jpg?bch=484807" alt="Finding her">
-              <h1 class="text-md text-center text-[#2f2f2f] font-semibold hover:font-bold cursor-pointer">Finding her</h1>
-              <h2 class="text-sm text-center pl-3 cursor-pointer">Kushagra</h2>
+            <div class="px-2 w-[13%] ">
+              <img  class="cursor-pointer rounded-full" src="https://c.saavncdn.com/editorial/JhankarBeats_saavn_radio_20201215120219_150x150.jpg" alt="Finding her">
+              <h1 class="text-md text-center text-[#2f2f2f] font-semibold hover:font-bold cursor-pointer">Hindi Jarkhand</h1>
+              <h2 class="text-sm text-center pl-3 cursor-pointer">Hindi Radio</h2>
             </div>
-            <div>
-              <img   class="cursor-pointer rounded-full"   src="https://c.saavncdn.com/839/Mismatched-Season-3-Soundtrack-from-the-Netflix-Series-Hindi-2024-20241217204803-150x150.jpg?bch=484807" alt="Ishq hai">
-              <h1 class="text-md text-center text-[#2f2f2f] font-semibold hover:font-bold cursor-pointer">Ishq hai</h1>
-              <h2 class="text-sm text-center pl-3 cursor-pointer">Anurag Shaiq</h2>
             </div>
-            <div>
-              <img  class="cursor-pointer rounded-full"   src="https://c.saavncdn.com/840/Dilwale-Hindi-1993-20240912051439-150x150.jpg?bch=484807" alt="Dilawale">
-              <h1 class="text-md text-center text-[#2f2f2f] font-semibold hover:font-bold cursor-pointer">Dilwale</h1>
-              <h2 class="text-sm text-center pl-3 cursor-pointer">A.R.Rahman</h2>
+            <!-- Recommonded Artists -->
+            <h1 class="font-semibold tex-xl text-[#404040] py-2">Recommended Artist Stations</h1>
+            <!-- outer div -->
+            <div class="w-95%  flex items-center">
+             <!-- inner div -->
+            <div class="px-2 w-[13%] "> 
+              <img class="cursor-pointer rounded-full" src="https://c.saavncdn.com/artists/Yo_Yo_Honey_Singh_002_20221216102650_150x150.jpg" alt="Honey singh">
+              <h1 class="text-md text-center text-[#2f2f2f] font-semibold hover:font-bold cursor-pointer">Yo Yo Honey singh </h1>
+              <h2 class="text-sm text-center pl-3 cursor-pointer">Artist Radio</h2>
+            </div>
+            <div class="px-2 w-[13%] ">
+              <img class="cursor-pointer rounded-full"  src="https://c.saavncdn.com/artists/Shreya_Ghoshal_007_20241101074144_150x150.jpg" alt="Shreya Ghoshal">
+              <h1 class="text-md text-center text-[#2f2f2f] font-semibold hover:font-bold cursor-pointer">Shreya Ghoshal</h1>
+              <h2 class="text-sm text-center cursor-pointer pl-3">Artist Radio</h2>
+            </div>
+            <div class="px-2 w-[13%] ">
+              <img  class="cursor-pointer rounded-full" src="https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_150x150.jpg" alt="Arjit Singh">
+              <h1 class="text-md text-center text-[#2f2f2f] font-semibold hover:font-bold cursor-pointer">Arjit Singh</h1>
+              <h2 class="text-sm text-center pl-3 cursor-pointer">Artist Radio</h2>
+            </div>
+            <div class="px-2 w-[13%] ">
+              <img  class="cursor-pointer rounded-full"   src="https://c.saavncdn.com/artists/Sonu_Nigam_150x150.jpg" alt="Sonu Nigam">
+              <h1 class="text-md text-center text-[#2f2f2f] font-semibold hover:font-bold cursor-pointer">Sonu Nigam</h1>
+              <h2 class="text-sm text-center pl-3 cursor-pointer">Artist Radio</h2>
             </div>
             </div>
           </main>
